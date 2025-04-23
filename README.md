@@ -39,27 +39,28 @@ The result of this preprocessing step is a set of cropped images — each repres
 1. **Piece Extraction**  
    Detects individual puzzle pieces from a shuffled image using edge detection and contour analysis via OpenCV.
 <p align="center">
-  <img src="extracted_pieces/piece_1.png" width="30%" alt="Extracted Piece 1"/>
-  <img src="extracted_pieces/piece_2.png" width="30%" alt="Extracted Piece 2"/>
-  <img src="extracted_pieces/piece_3.png" width="30%" alt="Extracted Piece 3"/>
+  <img src="extracted_pieces/piece_1.png" width="10%" alt="Extracted Piece 1"/>
+  <img src="extracted_pieces/piece_2.png" width="10%" alt="Extracted Piece 2"/>
+  <img src="extracted_pieces/piece_3.png" width="10%" alt="Extracted Piece 3"/>
 </p>
 
 3. **Feature Matching with RANSAC**  
    Each puzzle piece is matched to a reference image using SIFT keypoints and descriptors. RANSAC is applied to estimate a homography matrix for accurate alignment.
 <p align="center">
-  <img src="matched_images/matched_1.png" width="30%" alt="Matched Piece 1"/>
-  <img src="matched_images/matched_2.png" width="30%" alt="Matched Piece 2"/>
+  <img src="matched_images/matched_1.png" width="45%" alt="Matched Piece 1"/>
+  <img src="matched_images/matched_2.png" width="45%" alt="Matched Piece 2"/>
 </p>
 
 4. **Transparent Background**  
    White areas in the puzzle pieces are made transparent to blend seamlessly during reconstruction.
 <p align="center">
-  <img src="reconstructed/rec_pz.png" width="30%" alt="White areas"/>
+  <img src="reconstructed/rec_pz.png" width="50%" alt="White areas"/>
 </p>
+
 5. **Puzzle Reconstruction**  
    Each aligned piece is overlayed onto a transparent canvas, rebuilding the complete puzzle.
 <p align="center">
-  <img src="reconstructed/rec_pz1.png" width="30%" alt="White areas"/>
+  <img src="reconstructed/rec_pz1.png" width="50%" alt="White areas"/>
 </p>
 
 ## Results
